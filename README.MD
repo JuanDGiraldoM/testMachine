@@ -10,6 +10,7 @@
 - Nodejs
 - NPM
 - Angular
+- Google Chrome
 
 ## Tools to test
 
