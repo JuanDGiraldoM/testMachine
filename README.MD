@@ -22,3 +22,8 @@
 ```
 ./performance.sh
 ```
+or
+
+```
+(./performance.sh) > results.log 2>&1
+```

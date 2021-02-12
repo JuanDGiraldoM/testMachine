@@ -3,26 +3,26 @@ set -e
 
 echo
 echo =============================================================
-echo Gradle version
+echo -e "\e[93m Gradle version\e[0m"
 echo =============================================================
 gradle -v >logs/gradle.log
 time gradle -v >logs/gradle.log
+
 cd ms_balances_api
-
 echo
 echo =============================================================
-echo Build project
+echo -e "\e[93m Build project\e[0m"
 echo =============================================================
 time gradle build
 
 echo
 echo =============================================================
-echo Build project - Cache
+echo -e "\e[93m Build project - Cache\e[0m"
 echo =============================================================
 time gradle build
 
 echo
 echo =============================================================
-echo Test project
+echo -e "\e[93m Test project\e[0m"
 echo =============================================================
 time gradle test

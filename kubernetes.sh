@@ -13,44 +13,44 @@ function getPodName() {
 
 echo
 echo =============================================================
-echo Kubectl version
+echo -e "\e[93m Kubectl version\e[0m"
 echo =============================================================
 kubectl version --client >logs/kubectl.log
 time kubectl version --client >logs/kubectl.log
 
 echo
 echo =============================================================
-echo AWS Configure
+echo -e "\e[93m AWS Configure\e[0m"
 echo =============================================================
 aws configure set region us-east-1
 
 echo
 echo =============================================================
-echo AWS update kubeconfig
+echo -e "\e[93m AWS update kubeconfig\e[0m"
 echo =============================================================
 aws eks update-kubeconfig --name eks-ecosistemas-de-riesgos-qa
 
 echo
 echo =============================================================
-echo kubectl get pods
+echo -e "\e[93m kubectl get pods\e[0m"
 echo =============================================================
 time kubectl -n ria-qa get pods >logs/pods.log
 getPodName
 
 echo
 echo =============================================================
-echo kubectl describe pod
+echo -e "\e[93m kubectl describe pod\e[0m"
 echo =============================================================
 time kubectl -n ria-qa describe pod $pod >logs/pods-describe.log
 
 echo
 echo =============================================================
-echo kubectl logs
+echo -e "\e[93m kubectl logs\e[0m"
 echo =============================================================
 time kubectl -n ria-qa logs $pod -c $container >logs/pods-logs.log
 
 echo
 echo =============================================================
-echo kubectl top pods
+echo -e "\e[93m kubectl top pods\e[0m"
 echo =============================================================
 time kubectl -n ria-qa top pods >logs/pods-top.log
