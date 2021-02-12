@@ -43,6 +43,12 @@ time ng build
 
 echo
 echo =============================================================
+echo -e "\e[93m ng build - Cache\e[0m"
+echo =============================================================
+time ng build
+
+echo
+echo =============================================================
 echo -e "\e[93m ng test\e[0m"
 echo =============================================================
 time ng test --code-coverage --watch=false --progress=false
