@@ -1,58 +1,56 @@
 # !/bin/sh
 set -e
 
-echo
-echo =============================================================
-echo Test container tools
-echo =============================================================
-docker image rm -f alpine:latest || true
-docker container rm -f temp || true
+function catchError() {
+    echo -e "\e[31mIt has failed to $1!\e[0m"
+}
 
 echo
 echo =============================================================
-echo docker --version
+echo Git
 echo =============================================================
-docker --version >logs/docker.log
-time docker --version
+git --version || catchError "open git"
 
 echo
 echo =============================================================
-echo docker build -t temp Docker
+echo AWS CLI
+echo -e "\e[33mit should be version 2!\e[0m"
 echo =============================================================
-time docker build -t temp Docker
+aws --version || catchError "open aws cli"
 
 echo
 echo =============================================================
-echo docker build -t temp Docker -- caché
+echo Docker
 echo =============================================================
-time docker build -t temp Docker
+docker -v || catchError "open docker"
 
 echo
 echo =============================================================
-echo docker run --name temp temp ls
+echo Kubectl
 echo =============================================================
-time docker run --name temp temp ls >logs/docker-run.log
+kubectl version --client || catchError "open k8s"
 
 echo
 echo =============================================================
-echo docker image ls
+echo Java
+echo -e "\e[33mit should be 11!\e[0m"
 echo =============================================================
-time docker image ls >logs/docker-images.log
+java --version || catchError "open java"
 
 echo
 echo =============================================================
-echo docker container ls -a
+echo Gradle
 echo =============================================================
-time docker container ls -a >logs/docker-containers.log
+gradle -v || catchError "open gradle"
 
 echo
 echo =============================================================
-echo docker container rm temp
+echo npm
 echo =============================================================
-time docker container rm temp
+npm -v || catchError "open npm"
 
 echo
 echo =============================================================
-echo docker image rm temp
+echo ng
 echo =============================================================
-time docker image rm temp
+ng version || catchError "open ng"
