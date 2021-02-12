@@ -2,20 +2,21 @@
 
 ## Prerequisites
 
--  AWS CLI 2.0
--  Docker Desktop
--  Java 11
--  Gradle
--  Nodejs
--  NPM
--  Angular
+- Git
+- AWS CLI 2.0
+- Docker Desktop
+- Java 11
+- Gradle
+- Nodejs
+- NPM
+- Angular
 
 ## Tools to test
 
 - Docker
 - Kubernetes
-- Gradle
-- Node
+- Java compilation with Gradle
+- Javascript compilation with npm
 
 ## Sample
 ```
