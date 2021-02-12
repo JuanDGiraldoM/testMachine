@@ -5,22 +5,22 @@ echo
 echo =============================================================
 echo npm version
 echo =============================================================
-npm -v >npm.log
-time gradle -v >gradle.log
+npm -v >logs/npm.log
+time gradle -v >logs/gradle.log
 
 echo
 echo =============================================================
 echo node version
 echo =============================================================
-node -v >node.log
-time node -v >node.log
+node -v >logs/node.log
+time node -v >logs/node.log
 
 echo
 echo =============================================================
 echo ng version
 echo =============================================================
-ng version >ng.log
-time ng version >ng.log
+ng version >logs/ng.log
+time ng version >logs/ng.log
 
 echo
 echo =============================================================

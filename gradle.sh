@@ -5,8 +5,8 @@ echo
 echo =============================================================
 echo Gradle version
 echo =============================================================
-gradle -v >gradle.log
-time gradle -v >gradle.log
+gradle -v >logs/gradle.log
+time gradle -v >logs/gradle.log
 cd ms_balances_api
 
 echo

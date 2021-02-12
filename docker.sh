@@ -12,6 +12,7 @@ echo
 echo =============================================================
 echo docker --version
 echo =============================================================
+docker --version >logs/docker.log
 time docker --version
 
 echo
@@ -30,19 +31,19 @@ echo
 echo =============================================================
 echo docker run --name temp temp ls
 echo =============================================================
-time docker run --name temp temp ls
+time docker run --name temp temp ls >logs/docker-run.log
 
 echo
 echo =============================================================
 echo docker image ls
 echo =============================================================
-time docker image ls
+time docker image ls >logs/docker-images.log
 
 echo
 echo =============================================================
 echo docker container ls -a
 echo =============================================================
-time docker container ls -a
+time docker container ls -a >logs/docker-containers.log
 
 echo
 echo =============================================================
