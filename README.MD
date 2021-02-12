@@ -19,5 +19,5 @@
 
 ## Sample
 ```
-./docker.sh
+./performance.sh
 ```
