@@ -12,11 +12,6 @@ echo -e "\e[96m*************************************************************\e[0
 ./repos.sh
 
 echo
-echo -e "\e[96mDocker"
-echo -e "\e[96m*************************************************************\e[0m"
-./docker.sh
-
-echo
 echo -e "\e[96mJava Compilation"
 echo -e "\e[96m*************************************************************\e[0m"
 ./gradle.sh
@@ -25,6 +20,11 @@ echo
 echo -e "\e[96mJavascript Compilation"
 echo -e "\e[96m*************************************************************\e[0m"
 ./node.sh
+
+echo
+echo -e "\e[96mDocker"
+echo -e "\e[96m*************************************************************\e[0m"
+./docker.sh
 
 echo
 echo -e "\e[96mKubernetes"
