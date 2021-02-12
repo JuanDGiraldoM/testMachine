@@ -20,12 +20,6 @@ time kubectl version --client >logs/kubectl.log
 
 echo
 echo =============================================================
-echo -e "\e[93m AWS Configure\e[0m"
-echo =============================================================
-aws configure set region us-east-1
-
-echo
-echo =============================================================
 echo -e "\e[93m AWS update kubeconfig\e[0m"
 echo =============================================================
 aws eks update-kubeconfig --name eks-ecosistemas-de-riesgos-qa

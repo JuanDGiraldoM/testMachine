@@ -13,6 +13,7 @@ echo -e "\e[93m AWS CLI\e[0m"
 echo -e "\e[33mit should be version 2!\e[0m"
 echo =============================================================
 aws --version
+aws configure set region us-east-1
 
 echo
 echo =============================================================
