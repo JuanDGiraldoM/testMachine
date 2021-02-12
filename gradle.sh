@@ -23,6 +23,6 @@ time gradle build
 
 echo
 echo =============================================================
-echo Build project - Cache
+echo Test project
 echo =============================================================
 time gradle test
