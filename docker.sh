@@ -7,6 +7,7 @@ echo -e "\e[93m Test container tools\e[0m"
 echo =============================================================
 docker image rm -f alpine:latest || true
 docker container rm -f temp || true
+docker builder prune -a -f
 
 echo
 echo =============================================================
